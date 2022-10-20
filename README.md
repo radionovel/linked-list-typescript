@@ -14,13 +14,13 @@ See Also:
 [npm][]:
 
 ```bash
-npm install --save linked-list-typescript
+npm install --save @radionoff17/linked-list-typescript
 ```
 
 [yarn][]:
 
 ```bash
-yarn add linked-list-typescript
+yarn add @radionoff17/linked-list-typescript
 ```
 
 ## Building from source
@@ -56,8 +56,8 @@ yarn|npm run coverage:report
 Importing:
 
 ```typescript
-import { LinkedList } from 'linked-list-typescript';
-const { LinkedList } = require('linked-list-typescript')
+import { LinkedList } from '@radionoff17/linked-list-typescript';
+const { LinkedList } = require('@radionoff17/linked-list-typescript')
 ```
 
 ## API

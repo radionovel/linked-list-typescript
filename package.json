@@ -1,5 +1,5 @@
 {
-  "name": "linked-list-typescript",
+  "name": "@radionoff17/linked-list-typescript",
   "version": "1.0.15",
   "description": "simple typescript linked-list with generics typing",
   "main": "lib/src/index.js",
@@ -7,7 +7,10 @@
   "files": [
     "lib/src/"
   ],
-  "repository": "https://github.com/sfkiwi/linked-list-typescript.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radionovel/linked-list-typescript.git"
+  },
   "author": "Mike Sutherland <mjfsutherland@gmail.com>",
   "license": "MIT",
   "private": false,
@@ -27,7 +30,7 @@
     "test": "nyc ./node_modules/.bin/mocha",
     "coverage": "yarn run build && nyc ./node_modules/.bin/mocha",
     "coverage:lcov": "nyc report --reporter=text-lcov | coveralls",
-    "coverage:report": "./node_modules/.bin/nyc report --reporter text-summary --reporter html && open coverage/index.html",
+    "coverage:report": "nyc report --reporter text-summary --reporter html && open coverage/index.html",
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "clean": "rm -fr clean coverage .nyc_output"
   },
