@@ -41,6 +41,10 @@ export class LinkedList<T> {
         return this._length;
     }
 
+    get isEmpty(): boolean {
+        return this.length === 0
+    }
+
     // Adds the element at a specific position inside the linked list
     insert(val: T, previousItem: T, checkDuplicates: boolean = false): boolean {
 
@@ -229,6 +233,14 @@ export class LinkedList<T> {
 
     toArray(): T[] {
         return [...this];
+    }
+
+    map(callback: (item: T) => any): Array<any> {
+        return this.toArray().map(callback)
+    }
+
+    each(callback: (item: T) => void): void {
+        this.toArray().forEach(callback)
     }
 
     private isDuplicate(val: T): boolean {

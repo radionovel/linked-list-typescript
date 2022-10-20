@@ -532,4 +532,27 @@ describe('Linked-List Tests', () => {
     expect(result[4]).to.equal(8);
     expect(result[5]).to.equal(9);
   })
+
+  it('should return true on empty list', () => {
+    let list = new LinkedList()
+    expect(list.isEmpty).to.be.true
+  })
+
+  it('should return array after apply map function', () => {
+    let list = new LinkedList<number>(2, 3, 5)
+    let result = list.map((value) => value * 2)
+    expect(result[0]).to.equal(4)
+    expect(result[1]).to.equal(6)
+    expect(result[2]).to.equal(10)
+  })
+
+  it('should process values of list via each function', () => {
+    let list = new LinkedList<number>(2, 3, 5)
+    let result: Array<number> = []
+    list.each((value) => result.push(value))
+    expect(result[0]).to.equal(2)
+    expect(result[1]).to.equal(3)
+    expect(result[2]).to.equal(5)
+  })
+
 });
